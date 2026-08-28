@@ -14,12 +14,13 @@
 :root{
   --ink:#16222C; --ink2:#25343F;
   --paper:#E7EAE4; --card:#FBFBF8;
-  --indigo:#2C5560; --cinnabar:#B23A32; --ochre:#A8792A; --sage:#4B7A5B; --plum:#6B4A63;
+  --indigo:#2C5560; --cinnabar:#B23A32; --ochre:#A8792A; --sage:#4B7A5B;
   --line:#D2D6CC; --muted:#6C7871;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0}
-body{background:var(--paper);color:var(--ink);font-size:15px;line-height:1.6;padding-bottom:calc(44px + env(safe-area-inset-bottom,0px));
+body{background:var(--paper);color:var(--ink);font-size:15px;line-height:1.6;
+ padding-bottom:calc(44px + env(safe-area-inset-bottom,0px));
  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
 .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums}
 .serif{font-family:"Songti SC","STSong",Georgia,serif}
@@ -38,8 +39,8 @@ header{background:var(--ink);color:#EDEFE9;padding:calc(17px + env(safe-area-ins
 .tick b{position:absolute;top:20px;left:50%;transform:translateX(-50%);font-size:9px;color:#8FA39B;font-weight:400;white-space:nowrap}
 .now{position:absolute;top:4px;width:9px;height:9px;border-radius:50%;background:#E7EAE4;border:2px solid var(--ink);transform:translateX(-50%);box-shadow:0 0 0 2px #E7EAE4}
 
-nav{display:flex;background:var(--ink2);position:sticky;top:0;z-index:9;overflow-x:auto}
-nav button{flex:1;min-width:56px;background:none;border:0;color:#8FA39B;padding:11px 3px;font-size:13px;font-family:inherit;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
+nav{display:flex;background:var(--ink2);position:sticky;top:0;z-index:9}
+nav button{flex:1;background:none;border:0;color:#8FA39B;padding:11px 3px;font-size:13.5px;font-family:inherit;cursor:pointer;border-bottom:2px solid transparent}
 nav button[aria-selected="true"]{color:#fff;border-bottom-color:#D9A441}
 main{padding:14px 12px}
 section[hidden]{display:none}
@@ -49,14 +50,13 @@ section[hidden]{display:none}
 .card.warn{border-left:4px solid var(--ochre)}
 .card.stop{border-left:4px solid var(--cinnabar)}
 .card.go{border-left:4px solid var(--sage)}
-.card.pl{border-left:4px solid var(--plum)}
 h2{font-size:12px;letter-spacing:.16em;color:var(--muted);margin:20px 4px 8px;font-weight:600}
 h3{font-size:15px;margin:0 0 8px;font-weight:600;line-height:1.4}
 h3 .t{font-size:11px;font-weight:400;color:var(--muted);letter-spacing:.06em;margin-left:6px}
 p{margin:6px 0}
 small{color:var(--muted);font-size:12.5px;display:block;margin-top:7px;line-height:1.65}
 ul,ol{margin:6px 0;padding-left:19px}li{margin:5px 0}
-.q li{margin:8px 0}
+.q li{margin:7px 0}
 
 .chk{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-top:1px solid #EAEBE5;cursor:pointer}
 .chk:first-of-type{border-top:0}
@@ -66,19 +66,17 @@ ul,ol{margin:6px 0;padding-left:19px}li{margin:5px 0}
 .txt{flex:1;min-width:0}
 .txt b{display:block;font-weight:600}
 .txt span{font-size:12.5px;color:var(--muted);display:block}
-.time{flex:0 0 50px;font-size:11.5px;color:var(--muted);padding-top:2px}
+.time{flex:0 0 44px;font-size:11.5px;color:var(--muted);padding-top:2px}
 
 .pills{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0}
 .pill{border:1.5px solid var(--line);background:#fff;border-radius:16px;padding:6px 13px;font-size:13px;font-family:inherit;cursor:pointer;color:var(--ink)}
 .pill.on{background:var(--indigo);border-color:var(--indigo);color:#fff}
 textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:9px;font-family:inherit;font-size:14px;resize:vertical;min-height:54px;background:#fff;color:var(--ink)}
 .btn{background:var(--ink);color:#fff;border:0;border-radius:8px;padding:11px 16px;font-family:inherit;font-size:14px;cursor:pointer;margin-top:9px}
-.btn.wide{display:block;width:100%;text-align:center}
-.btn.alt{background:var(--indigo)}
 
 .ev{display:flex;gap:10px;padding:11px 0;border-top:1px solid #EAEBE5;cursor:pointer}
 .ev:first-child{border-top:0}
-.ev .d{flex:0 0 58px}
+.ev .d{flex:0 0 54px}
 .ev .d b{display:block;font-size:14px;font-weight:600}
 .ev .d span{font-size:10.5px;color:var(--muted)}
 .cd{display:inline-block;font-size:10.5px;padding:1px 7px;border-radius:9px;background:#E3E7DF;color:var(--muted);margin-left:5px;font-weight:400}
@@ -90,21 +88,24 @@ textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:9px;f
 .dark h3{color:#fff}
 .dark .row{display:flex;gap:9px;padding:7px 0;border-top:1px solid #2F3E48;font-size:13.5px}
 .dark .row:first-of-type{border-top:0}
-.dark .row b{flex:0 0 66px;color:#9FB0A8;font-weight:400;font-size:12.5px;padding-top:2px}
+.dark .row b{flex:0 0 60px;color:#9FB0A8;font-weight:400;font-size:12.5px;padding-top:2px}
 .dark .row em{font-style:normal;color:#F0C36A;font-weight:600}
 
-.dom{display:flex;gap:11px;padding:12px 0;border-top:1px solid #EAEBE5}
-.dom:first-child{border-top:0}
-.dom .n{flex:0 0 26px;height:26px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px}
-.dom .txt span{color:var(--ink);font-size:13.5px;margin-top:3px}
-table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
-th,td{text-align:left;padding:6px 6px 6px 0;border-bottom:1px solid #EAEBE5;vertical-align:top}
-th{color:var(--muted);font-weight:600;font-size:11.5px;letter-spacing:.05em}
+.rule{background:var(--ink);color:#EDEFE9;border-radius:8px;padding:11px 13px;margin:9px 0;font-size:14px;line-height:1.6}
+.rule b{color:#F0C36A}
+.hosp{display:flex;gap:10px;padding:10px 0;border-top:1px solid #EAEBE5}
+.hosp:first-of-type{border-top:0}
+.hosp .n{flex:0 0 72px;font-weight:600;font-size:13.5px}
+.hosp .v{flex:1;font-size:13px}
+.hosp .v span{color:var(--muted);display:block;font-size:12.5px;margin-top:2px}
+
+table{width:100%;border-collapse:collapse;font-size:13px;margin:7px 0}
+td{text-align:left;padding:6px 6px 6px 0;border-bottom:1px solid #EAEBE5;vertical-align:top}
 .foot{text-align:center;color:var(--muted);font-size:11.5px;padding:18px 20px 0;line-height:1.7}
 </style>
 
 <header>
-  <div class="eyebrow">术后康复 · 长期健康管理</div>
+  <div class="eyebrow">健康管理</div>
   <div class="dayline"><span class="daynum mono serif" id="dn">–</span><span class="daylabel">天</span></div>
   <div class="sub mono" id="td"></div>
   <div class="ruler" id="ruler"></div>
@@ -112,18 +113,18 @@ th{color:var(--muted);font-weight:600;font-size:11.5px;letter-spacing:.05em}
 <nav id="nav"></nav>
 <main>
 
+<!-- ══ 今日 ══ -->
 <section id="s-today">
   <div class="card acc">
-    <h3>服药时间轴<span class="t" id="phase"></span></h3>
+    <h3>每日<span class="t" id="phase"></span></h3>
     <div id="daily"></div>
-    <small><b>唯一每天都要守住的规则：铁剂与中药间隔 ≥2 小时。</b>中药含鞣酸与贝壳类钙，会直接抵消铁吸收。</small>
+    <small><b>两条间隔规则：</b>① 铁剂与中药间隔 ≥2 小时（中药含鞣酸与贝壳类钙，会抵消铁吸收）② 钙也会抑制铁吸收——<b>钙放睡前、铁放午间，已经天然错开，不要挪到一起</b></small>
   </div>
 
   <div class="card warn" id="switchcard">
-    <h3>10 月初的用药切换</h3>
-    <p><b>信必可</b>（7 月初开始，早晚各一次）约在 <b>10 月 5 日前后用完</b>。</p>
-    <p>用完之后两件事：<br>① 停信必可 → 启用<b>雷诺考特</b>（布地奈德鼻喷雾剂，每侧 1 喷，每日 2 次）<br>② 去<b>仁济西院过敏科</b>普通门诊复诊 + 复查肺功能</p>
-    <small>耳鼻喉医生的意见是两者不同时用以控制激素总量。这一点与主流指南（上下气道共病推荐鼻用 + 吸入联用）存在分歧，已列入 10 月复诊待问清单——请让专科医生裁决，不要自行调整。</small>
+    <h3>10 月初换药</h3>
+    <p>信必可约 <b>10 月 5 日</b>用完。之后：停信必可 → 启用<b>雷诺考特</b>（每侧 1 喷，每日 2 次），并去仁济西院过敏科复诊。</p>
+    <small>耳鼻喉建议两者不同期使用，与指南推荐联用有分歧，已列入复诊待问——请医生裁决，不要自行调整。</small>
   </div>
 
   <div class="card go">
@@ -132,261 +133,182 @@ th{color:var(--muted);font-weight:600;font-size:11.5px;letter-spacing:.05em}
   </div>
 
   <div class="card">
-    <h3>今日记录<span class="t">复诊时给医生看</span></h3>
+    <h3>今日记录</h3>
     <div class="pills" id="bleed"></div>
-    <textarea id="note" placeholder="出血量 / 咳嗽 / 鼻塞 / 疲劳 / 情绪 / 睡眠 / 其他"></textarea>
-    <button class="btn" id="copy">复制最近 14 天记录</button>
+    <textarea id="note" placeholder="出血 / 咳嗽 / 鼻塞 / 疲劳 / 睡眠"></textarea>
+    <button class="btn" id="copy">复制最近 14 天</button>
     <small id="saved"></small>
   </div>
 </section>
 
+<!-- ══ 时间轴 ══ -->
 <section id="s-plan" hidden>
-  <div class="card acc">
-    <h3>把这些装进手机日历</h3>
-    <p>生成的日历文件包含：每日早/中/晚三次用药提醒（10 月自动从信必可切换为雷诺考特）、双周中医复诊、以及下面全部就诊节点。</p>
-    <button class="btn alt wide" id="ics">导出日历文件（.ics）</button>
-    <small>iPhone：点按钮 → 用「日历」打开 → 添加全部。<br>安卓：保存文件 → Google 日历「设置 → 导入」。</small>
-  </div>
   <div class="card"><div id="events"></div><small>点一行可标记完成。</small></div>
   <div class="card stop">
-    <h3>三条不能漏</h3>
+    <h3>两条不能漏</h3>
     <ul>
-      <li><b>9/25 术后满 8 周才查铁蛋白</b>——手术炎症会造成假性升高，早查不可信</li>
-      <li><b>10 月复查肺功能时，务必让技师填入当天血红蛋白值</b>——7/30 那次血红蛋白栏是空白的，弥散量未做校正，结论不能直接沿用</li>
-      <li><b>每次麻醉、每张新处方主动报两句</b>：青霉素过敏 + QTc 450 ms 临界</li>
+      <li><b>9/25 必须满 8 周才查铁蛋白</b>——手术炎症会造成假性升高，早查不可信。<b>同一次抽血顺手加 25(OH)D 和血清钙</b>：维 D 不足时补再多钙也吸收有限，加这两项几乎不增加成本</li>
+      <li><b>10 月复查肺功能，务必让技师录入当天血红蛋白值</b>——7/30 那次 Hb 栏是空的，弥散结果未校正，不能直接沿用</li>
     </ul>
   </div>
 </section>
 
-<section id="s-domain" hidden>
-  <div class="card"><div id="domains"></div></div>
-
-  <div class="card go">
-    <h3>过敏原：相隔三年两次检测<span class="t">仁济西院 2023-05 / 2026-07</span></h3>
-    <p><b>结论：两次均未查到有临床意义的过敏原致敏，且三年间持续减弱。</b></p>
-    <table>
-      <tr><th>项目</th><th>2023-05</th><th>2026-07</th></tr>
-      <tr><td><b>总 IgE</b>（&lt;60）</td><td class="mono"><b>119.0 ↑</b></td><td class="mono"><b>119.0 ↑</b></td></tr>
-      <tr><td>户尘螨 d1</td><td class="mono">0.35</td><td class="mono">0.22</td></tr>
-      <tr><td>粉尘螨 d2</td><td class="mono">0.41</td><td class="mono">0.14</td></tr>
-      <tr><td>屋尘混合 hx2</td><td class="mono">0.28</td><td class="mono">未测</td></tr>
-      <tr><td>虾 f24</td><td class="mono">0.31</td><td class="mono">0.06</td></tr>
-      <tr><td>花粉/霉菌/猫狗皮屑/蛋奶豆麦</td><td class="mono">≤0.08</td><td class="mono">≤0.04</td></tr>
-      <tr><td><b>phadiatop 吸入过筛</b></td><td class="mono"><b>0.33（阴性）</b></td><td class="mono">未测</td></tr>
-    </table>
-    <small><b>全部低于 0.35 KUA/L 临床阈值。</b>报告上 &lt;0.1 的参考值是检出限，不是临床阈值——同一实验室的《肉类 IgE》报告用的就是 &lt;0.35 并附 0 级分级。总 IgE 三年零变化，不像活动性指标，更像体质性基线。</small>
-  </div>
-
-  <div class="card go">
-    <h3>2023 年已完成的鉴别诊断<span class="t">均阴性，已排除</span></h3>
-    <table>
-      <tr><th>检查</th><th>结果</th><th>意义</th></tr>
-      <tr><td>ANCA + GBM</td><td class="mono">MPO / PR3 / 抗GBM<br>均 &lt;0.20</td><td><b>血管炎（EGPA）已排除</b></td></tr>
-      <tr><td>免疫球蛋白</td><td class="mono">IgG 14.50<br>IgA 2.63<br>IgM 2.37</td><td>全部正常，无免疫缺陷</td></tr>
-      <tr><td>肉类 IgE</td><td class="mono">牛肉 0.07<br>羊肉 0.06<br>鳕鱼 0.11（0 级）</td><td><b>红肉补铁无过敏限制</b></td></tr>
-      <tr><td>血常规</td><td class="mono">Hb <b>131</b> g/L<br>嗜酸粒细胞 <b>0.12</b></td><td>缺铁是近三年内发生的；<b>未用药时嗜酸粒细胞即不高</b></td></tr>
-    </table>
-    <small>2023-05-17 采样于仁济西院过敏科（郭岚仕），当时诊断为「变应性鼻炎、咳嗽变异性哮喘、<b>荨麻疹</b>」——CVA 已有三年病程，不是今年新发。</small>
-  </div>
-
-  <div class="card acc">
-    <h3>这份结果改变了三件事</h3>
-    <ul>
-      <li><b>脱敏治疗（AIT）基本可以关掉</b>——没有明确靶点。省掉一个 3–5 年的选项。</li>
-      <li><b>环境控制投入产出比低</b>——除螨仪、防螨床品、空气净化器，对你意义有限，不必当重点。</li>
-      <li><b>非 2 型表型证据变硬</b>——2023 年未用药时嗜酸粒细胞 0.12（正常低端）+ 2026 年 FeNO 17 + 三年过敏原阴性。抗白三烯（孟鲁司特）与抗 IgE / 抗 IL-5 生物制剂路径预期获益都有限。</li>
-      <li><b>抗炎药物成了唯一手段</b>——既不能靠避开过敏原，也不能靠脱敏，生物制剂也不适用。吸入激素 + 鼻用激素几乎是仅有的工具。<b>这让「鼻喷推迟三个月」的代价明显变高。</b></li>
-    </ul>
-    <small>病历上「过敏性鼻炎伴哮喘」里的「过敏性」三个字，两次检测都不支持。</small>
-  </div>
-
-  <div class="card warn">
-    <h3>两个需要专科回答的新问题</h3>
-    <ol class="q">
-      <li><b>总 IgE 119 升高、特异性 IgE 全阴，这个组合怎么解释？</b>常见可能：① <b>局部变应性鼻炎（entopy）</b>——IgE 只在鼻黏膜局部产生，血清测不到；查体「鼻腔粘膜苍白」与血清阴性的矛盾正好符合这个模式，确诊需鼻激发试验或鼻分泌物特异性 IgE ② 套餐未覆盖的过敏原（本套仅 28 项）③ 其他导致总 IgE 升高的原因（如特应性皮炎等）。</li>
-      <li><b>7/30 的 FeNO 是在规律使用信必可约三周后测的</b>，吸入激素会压低 FeNO，那次「非 2 型炎症」的判断可能被治疗干扰。而 CAP 是 7/8 用药前抽的血、IgE 不受吸入激素影响——<b>证据权重上 CAP 高于 FeNO。</b></li>
-    </ol>
-  </div>
-  <div class="card warn">
-    <h3>查缺补漏：现在挂空档的事<span class="t">按重要性排</span></h3>
-    <ol class="q">
-      <li><b>CAP 结果已出（见「六大议题」页）：过敏原全阴、总 IgE 轻度升高。</b>剩下的动作是<b>把报告带去 10 月初复诊</b>，请医生解释「总 IgE 高但特异性 IgE 全阴」这个组合。</li>
-      <li><b>电子鼻咽镜检查</b>——华山耳鼻喉 7/24 明确建议，至今未做。</li>
-      <li><b>呼吸科就诊</b>——同一张病历第 3 条医嘱，也未落实（10 月去仁济过敏科可一并覆盖）。</li>
-      <li><b>肺结节的历次 CT 测值</b>——11 mm 结节随访，有意义的不是绝对大小而是「和上次比变了没有」。把历年报告的径线、位置、密度整理成一张表，12 月连同新片一起发给赵晓菁医生。</li>
-      <li><b>7/30 肺功能的小气道数据存为基线</b>：MEF25 63.5%、RV 136%、RV%TLC 130.4%。这组才是那份报告真正的阳性发现。</li>
-      <li><b>2023—2026 三年间的诊疗记录缺失</b>——2023 年 5 月确诊 CVA 后，到 2026 年 7 月复诊之间是否用过药、有无随访，目前无资料。这段空白会影响医生判断病程是持续还是复发。</li>
-      <li><b>2023 年诊断里的「荨麻疹」</b>目前还有没有？是否仍需随访？与总 IgE 轻度升高有无关联？</li>
-      <li><b>皮肤科</b>——色素与发际线，仍未预约。</li>
-      <li><b>年度甲功 TSH + FT4</b>——TPOAb 升高背景下的随访项。</li>
-      <li><b>疫苗两件</b>：乙肝 0–1–6 补种（表面抗体阴性、无保护）；流感疫苗（哮喘患者优先人群，10–11 月窗口）。可顺便问 23 价肺炎球菌疫苗。</li>
-    </ol>
-  </div>
-</section>
-
+<!-- ══ 忌口 ══ -->
 <section id="s-food" hidden>
   <div class="card stop">
-    <h3>🔴 长期严格避<span class="t">中西医一致，无争议</span></h3>
-    <p>蜂王浆 · 蜂胶 · 雪蛤 · 胎盘制品 · 任何标注「调节内分泌 / 女性保养」的雌激素类保健品</p>
-    <small>这一档是真正的高雌激素活性。体内仍有小肌瘤，这条要长期守。</small>
+    <h3>🔴 长期严格避</h3>
+    <p>蜂王浆 · 蜂胶 · 雪蛤 · 胎盘制品 · 任何「调节内分泌 / 女性保养」类保健品</p>
+    <small>真正的高雌激素活性，中西医一致。体内仍有小肌瘤，这条长期守。</small>
   </div>
   <div class="card warn">
-    <h3>🟡 中医忌口<span class="t">赵莉医生医嘱</span></h3>
+    <h3>🟡 中医忌口<span class="t">赵莉医生</span></h3>
     <table>
-      <tr><th>类别</th><th>内容</th></tr>
-      <tr><td>禽类</td><td>鸡、鸽子</td></tr>
-      <tr><td>水产</td><td>海鲜全部；河鱼、河虾少吃</td></tr>
-      <tr><td>豆类</td><td>所有豆子、豆浆、豆腐、豆制品</td></tr>
-      <tr><td>蔬菜</td><td>笋</td></tr>
+      <tr><td style="width:52px;color:var(--muted)">禽类</td><td>鸡、鸽子</td></tr>
+      <tr><td style="color:var(--muted)">水产</td><td>海鲜全部；河鱼河虾少吃</td></tr>
+      <tr><td style="color:var(--muted)">豆类</td><td>所有豆子、豆浆、豆腐、豆制品</td></tr>
+      <tr><td style="color:var(--muted)">蔬菜</td><td>笋</td></tr>
     </table>
-    <small>循证角度这一档支持有限（国内禽类禁用激素；大豆异黄酮对肌瘤的研究结论中性偏保护）。配合疗程执行无害——<b>前提是把蛋白和铁补回来。</b>下次复诊问清楚：忌口要执行多久。</small>
+    <small>下次复诊问清楚：这一档要执行多久。</small>
   </div>
   <div class="card go">
-    <h3>🟢 必须主动吃够<span class="t">忌口挖出的缺口</span></h3>
+    <h3>🟢 必须主动吃够</h3>
     <p><b>补铁主力：</b>牛肉 / 瘦猪肉 · 鸭血猪血 · 猪肝（每周 1–2 次）· 鸡蛋</p>
-    <p><b>配合：</b>十字花科（西兰花、花椰菜）；每餐配维 C 水果或彩椒</p>
-    <small>红肉、动物血、猪肝、鸡蛋都不在忌口名单里，而它们恰好是补铁效率最高的食物。忌口与补铁可以并存，但要主动往这几样上靠。</small>
+    <p><b>配合：</b>十字花科蔬菜；每餐配维 C 水果或彩椒</p>
+    <small>2023 年检测：牛肉、羊肉、鳕鱼 IgE 全部 0 级——红肉在过敏层面完全干净。而忌口砍掉了鸡和海鲜，蛋白与铁的缺口只能靠红肉、蛋、动物血补回来。</small>
   </div>
   <div class="card">
-    <h3>三条饮食红线</h3>
-    <ul><li>吃饭时不喝浓茶、咖啡（抑制铁吸收）</li><li>不空腹（胃蛋白酶原偏低）</li><li>酒精避免</li></ul>
-  </div>
-  <div class="card pl">
-    <h3>作息与情绪<span class="t">中医强调，同等重要</span></h3>
+    <h3>三条饮食红线 + 作息</h3>
     <ul>
-      <li>不熬夜——固定入睡时间比睡够时长更重要</li>
-      <li>不劳累：连续高强度工作后主动安排缓冲</li>
-      <li>情绪管理：肝郁与肌瘤在中医理论里直接相关；西医角度慢性压力也会加重气道高反应</li>
-      <li><b>术后满 2 个月（9/30）前不做剧烈运动、不提重物</b>，之后循序渐进恢复</li>
+      <li>吃饭时不喝浓茶、咖啡（抑制铁吸收）</li>
+      <li>不空腹（胃蛋白酶原偏低）</li>
+      <li>酒精避免</li>
+      <li><b>不熬夜、不劳累、控制情绪</b>——中医与西医在这一点上一致</li>
     </ul>
   </div>
-  <div class="card">
-    <h3>皮肤 / 头发</h3>
-    <ul><li>每天防晒 UVMune 400，雷打不动</li><li>A 醇继续停用，恢复时间待皮肤科确认</li><li>术后 2–3 个月可能有一波掉发：应激性休止期脱发，会自行恢复</li></ul>
-  </div>
 </section>
 
+<!-- ══ 就诊 ══ -->
 <section id="s-visit" hidden>
+
+  <div class="card acc">
+    <h3>该挂哪个科<span class="t">搞不清时看这里</span></h3>
+    <div class="rule">
+      默认挂 <b>过敏科</b>。<br>
+      只有需要「<b>看进鼻腔里面</b>」或「<b>动鼻子</b>」时，才需要耳鼻喉。
+    </div>
+    <table>
+      <tr><td style="width:78px;color:var(--muted)">过敏科</td><td>咳嗽、喘、胸闷、鼻塞鼻涕、开吸入剂或鼻喷、复查肺功能、过敏原、疫苗咨询</td></tr>
+      <tr><td style="color:var(--muted)">耳鼻喉</td><td>电子鼻咽镜、下鼻甲评估、鼻部手术相关</td></tr>
+    </table>
+    <small>过敏科能同时管上下气道——鼻子和肺都归它。耳鼻喉唯一不可替代的是<b>鼻内镜</b>（过敏科没有这个设备）。所以绝大多数情况直接挂过敏科就对了。</small>
+  </div>
+
+  <div class="card">
+    <h3>三家医院各管什么<span class="t">不要搞混</span></h3>
+    <div class="hosp"><div class="n">仁济西院</div><div class="v"><b>呼吸线主场</b><span>过敏科（固定专家门诊）为主管；需要鼻内镜时院内转诊耳鼻咽喉科。耳鼻喉 + 呼吸道 + 过敏，全部归这里</span></div></div>
+    <div class="hosp"><div class="n">华山东院</div><div class="v"><b>日常</b><span>公司附近。日常小病、抽血化验、铁剂随访</span></div></div>
+    <div class="hosp"><div class="n">华山总院</div><div class="v"><b>胃肠镜</b><span>12/23 无痛胃肠镜（已预约）。与华山东院是两个地方</span></div></div>
+    <div class="hosp"><div class="n">瑞金</div><div class="v"><b>妇科</b><span>冯炜炜医生，术后随访与 B 超</span></div></div>
+    <div class="hosp"><div class="n">仁济东院</div><div class="v"><b>肺结节</b><span>年度 CT，报告发赵晓菁医生</span></div></div>
+    <div class="hosp"><div class="n">岳阳</div><div class="v"><b>中医</b><span>赵莉医生，每两周周日上午</span></div></div>
+    <small><b>挂号前先在仁济公众号或 App 上确认专家门诊时间与号别，把随访关系固定下来。</b>能不能长期只找一个人，比换哪家医院更重要。</small>
+  </div>
+
   <div class="card dark">
-    <h3>给医生看的基本信息卡</h3>
+    <h3>给医生看的信息卡</h3>
     <div class="row"><b>过敏</b><span><em>青霉素类药物过敏</em></span></div>
     <div class="row"><b>心电</b><span><em>QTc 450 ms 临界</em>——开新处方前请知悉</span></div>
-    <div class="row"><b>手术</b><span>2026-07-31 瑞金 腹腔镜子宫肌瘤剔除（多发），病理良性；体内仍有小肌瘤</span></div>
-    <div class="row"><b>呼吸</b><span>咳嗽变异性哮喘（<b>2023-05 确诊，病程三年</b>）+ 慢性鼻炎；舒张试验阳性；小气道气体陷闭（RV 136%）。<b>2023 与 2026 两次过敏原检测均阴性</b>；ANCA/GBM 阴性，血管炎已排除</span></div>
-    <div class="row"><b>肺部</b><span>11 mm 肺结节，年度 CT 随访中</span></div>
-    <div class="row"><b>血液</b><span>缺铁性贫血，术后 Hb 98 g/L；口服琥珀酸亚铁缓释片</span></div>
-    <div class="row"><b>消化</b><span>胃蛋白酶原偏低，待胃肠镜（12 月）</span></div>
-    <div class="row"><b>甲状腺</b><span>TPOAb 升高，甲功正常，仅随访</span></div>
-    <div class="row"><b>免疫</b><span>乙肝表面抗体阴性（无保护），待补种</span></div>
-    <div class="row"><b>在用</b><span>布地奈德福莫特罗吸入剂 早晚各 1；中药汤剂 早晚；铁剂 午间；维D3 / B族 / Omega-3 / 益生菌</span></div>
-    <div class="row"><b>传染病</b><span>四项 2026-07-30 出具，有效期至 2027-01-30，12 月内镜可复用</span></div>
+    <div class="row"><b>呼吸</b><span>咳嗽变异性哮喘（2023-05 确诊）+ 慢性鼻炎；小气道气体陷闭 RV 136%</span></div>
+    <div class="row"><b>妇科</b><span>2026-07-31 腹腔镜子宫肌瘤剔除，病理良性；体内仍有小肌瘤</span></div>
+    <div class="row"><b>肺部</b><span>肺结节 11 mm，年度 CT 随访中</span></div>
+    <div class="row"><b>血液</b><span>缺铁性贫血，术后 Hb 98 g/L，口服铁剂中</span></div>
+    <div class="row"><b>其他</b><span>胃蛋白酶原偏低（待胃肠镜）；TPOAb 升高、甲功正常；乙肝表面抗体阴性</span></div>
+    <div class="row"><b>在用</b><span>布地奈德福莫特罗吸入剂 bid；中药汤剂 早晚；铁剂 午间；钙 + 维 D3 睡前</span></div>
   </div>
 
-  <h2>各科待问清单</h2>
+  <div class="card go">
+    <h3>已有结论，不必重复检查</h3>
+    <ul>
+      <li><b>过敏原：2023 与 2026 两次检测均阴性</b>（含 2023 年 phadiatop 总筛查）→ 非过敏原驱动，脱敏不适用</li>
+      <li><b>血管炎：2023 年 ANCA + 抗 GBM 三项全阴</b> → EGPA 已排除</li>
+      <li><b>表型：非嗜酸性 / 非 2 型</b>（2023 年未用药时嗜酸粒细胞 0.12 + 2026 年 FeNO 17）</li>
+    </ul>
+    <small>详细数据见《呼吸线证据小结》PDF，复诊时打印带去。</small>
+  </div>
+
+  <h2>待问清单</h2>
 
   <div class="card acc">
-    <h3>冯炜炜 · 瑞金妇科<span class="t">9/1 下午 · 手术医生</span></h3>
+    <h3>冯炜炜 · 瑞金妇科<span class="t">9/1 下午</span></h3>
     <ol class="q">
-      <li>术后 4 周月经量大是否正常？（带上记录）</li>
-      <li>残留小肌瘤的大小、位置，后续 B 超复查频率怎么定？</li>
-      <li>多发肌瘤 + AMH 1.84，复发风险大致区间？</li>
-      <li>宫腔形态术后是否改善、曼月乐现在能否放置？</li>
+      <li>术后月经量大是否正常？（带记录）</li>
+      <li>残留小肌瘤的大小位置，B 超复查频率怎么定？</li>
       <li>铁剂疗程还需多久、何时可停？</li>
-      <li>恢复正常运动强度的具体时间与强度上限？</li>
-      <li>乙肝疫苗补种可以开始了吗？流感疫苗有无禁忌？</li>
-      <li>12 月做无痛胃肠镜（含肠道准备）从妇科角度是否完全没问题？</li>
+      <li>恢复运动的时间与强度上限？</li>
+      <li>乙肝疫苗可以开始了吗？流感疫苗有无禁忌？</li>
+      <li>12 月无痛胃肠镜（含肠道准备）从妇科角度是否无碍？</li>
     </ol>
   </div>
 
   <div class="card acc">
-    <h3>赵莉 · 岳阳医院中医<span class="t">每两周 · 周日上午</span></h3>
+    <h3>仁济西院过敏科<span class="t">10 月初 · 挂专家门诊</span></h3>
     <ol class="q">
-      <li><b>鸡、海鲜、豆制品同时忌口，蛋白和铁的缺口怎么补？</b></li>
-      <li>经期是否需要停服汤剂？</li>
-      <li>汤剂与铁剂间隔 2 小时是否足够？</li>
-      <li>忌口需要执行多久？疗程期间还是长期？</li>
-      <li>12 月胃肠镜前是否需要停中药、提前几天？</li>
+      <li><b>先把长期关系定下来：</b>「我想以后呼吸这条线固定在您这儿随访，需要鼻内镜时能否帮我转院内耳鼻喉？」</li>
+      <li><b>请裁决：雷诺考特与信必可能否联用？</b>耳鼻喉建议错开，指南对上下气道共病推荐联用。鉴于脱敏与生物制剂均不适用，激素几乎是仅有的工具，推迟三个月的代价请评估</li>
+      <li><b>总 IgE 119 升高、两次共 60 余项特异性 IgE 全阴，如何解释？</b>是否考虑局部变应性鼻炎（entopy）、做鼻激发试验？</li>
+      <li><b>复查肺功能，检查前务必录入当天血红蛋白值</b></li>
+      <li>非 2 型表型下，长期方案怎么排？换季前提前多久启动鼻喷？</li>
+      <li>2023 年诊断里的「荨麻疹」现在还需随访吗？</li>
+      <li>流感疫苗、23 价肺炎球菌疫苗建议打吗？</li>
     </ol>
   </div>
 
   <div class="card acc">
-    <h3>仁济西院 过敏科<span class="t">10 月初 · 普通门诊</span></h3>
+    <h3>仁济 耳鼻咽喉科<span class="t">院内转诊</span></h3>
     <ol class="q">
-      <li><b>带 CAP 报告去（07-08 采样）。核心问题：总 IgE 119 升高但特异性 IgE 全阴，怎么解释？</b>是否需要考虑局部变应性鼻炎（entopy）、做鼻激发试验或鼻分泌物特异性 IgE？</li>
-      <li><b>相隔三年两次检测均阴性（含 2023 年 phadiatop 总筛查阴性），脱敏治疗是否可正式排除？环境控制还要不要做？</b></li>
-      <li>2023 年未用药时嗜酸粒细胞 0.12、2026 年 FeNO 17 —— 非 2 型表型下，当前方案是否需要调整？</li>
-      <li><b>复查肺功能</b>（薛璐医嘱 3 个月后）。<b>做之前务必让技师填入当天血红蛋白值</b>，7/30 那次未校正</li>
-      <li><b>请裁决一个分歧：</b>耳鼻喉建议雷诺考特与信必可不同时使用，而指南对上下气道共病是推荐联用的。<b>CAP 阴性意味着抗炎药物是唯一手段，推迟鼻部治疗的代价更高</b>——到底怎么排？</li>
-      <li>7/30 的 FeNO 是用药三周后测的，可能被压低。这次要不要在调整用药前重测一次 FeNO？</li>
-      <li>信必可用完后是继续、降级还是停？秋冬换季前要不要提前恢复？</li>
-      <li>小气道气体陷闭（RV 136%、MEF25 63.5%）需要针对性处理吗？</li>
-      <li>流感疫苗、23 价肺炎球菌疫苗，哮喘背景下建议打吗？</li>
-    </ol>
-  </div>
-
-  <div class="card acc">
-    <h3>孙庭钰 · 华山东院耳鼻喉<span class="t">雷诺考特用后两周复查</span></h3>
-    <ol class="q">
-      <li><b>电子鼻咽镜检查</b>——7/24 已建议，安排上</li>
+      <li><b>电子鼻咽镜</b>——2026-07-24 华山耳鼻喉已建议，至今未做</li>
       <li>下鼻甲肥大是否需要处理？</li>
-      <li>秋冬换季前提前用鼻喷：具体提前多久、连续用多久？（明年 8 月底就要启动）</li>
-      <li>雷诺考特是长期用还是季节性用？</li>
+    </ol>
+    <small>做完若无手术指征，就不必定期再来。挂号时确认该科在哪个院区。</small>
+  </div>
+
+  <div class="card acc">
+    <h3>赵莉 · 岳阳中医<span class="t">每两周 周日上午</span></h3>
+    <ol class="q">
+      <li>忌口造成的蛋白与铁缺口怎么补？忌口要执行多久？</li>
+      <li>经期是否停服汤剂？</li>
+      <li>汤剂与铁剂间隔 2 小时是否足够？</li>
     </ol>
   </div>
 
   <div class="card acc">
-    <h3>赵晓菁 · 仁济东院<span class="t">12 月 CT 后发报告</span></h3>
+    <h3>赵晓菁 · 仁济东院<span class="t">12 月 CT 后</span></h3>
     <ol class="q">
       <li><b>把历年 CT 的结节径线整理成表一起发过去</b>，不要只发最新一张</li>
-      <li>11 mm 结节当前性质判断？随访间隔维持一年还是需要缩短？</li>
-      <li>今年新增：CVA 诊断、小气道气体陷闭、腹腔镜手术史——是否影响随访策略？</li>
+      <li>11 mm 结节随访间隔维持一年还是缩短？</li>
     </ol>
   </div>
 
   <div class="card acc">
-    <h3>华山东院 · 铁剂随访<span class="t">10 月下旬</span></h3>
+    <h3>华山东院 铁剂随访<span class="t">10 月下旬</span></h3>
     <ol class="q">
-      <li>带 9/25 的铁四项 + 血常规结果去</li>
-      <li>铁蛋白回升到什么水平可以停药？停后多久复查一次？</li>
-      <li>若铁指标仍不回升 → 12 月胃肠镜的排查重点要相应提升</li>
+      <li>带 9/25 的铁四项、25(OH)D、血清钙结果去</li>
+      <li>铁蛋白回到什么水平可以停药？停后多久复查？</li>
     </ol>
   </div>
 
-  <div class="card acc">
-    <h3>皮肤科<span class="t">择期，尚未预约</span></h3>
-    <ol class="q">
-      <li>先用 Wood 灯或 VISIA 确认色斑类型（雀斑型 vs 黄褐斑），确认前不谈激光</li>
-      <li>发际线后移单独评估（与缺铁的弥漫性脱发不是一回事）</li>
-      <li>A 醇何时可恢复？</li>
-    </ol>
-  </div>
-</section>
-
-<section id="s-red" hidden>
   <div class="card stop">
-    <h3>⛔ 立即就医，不按时间表走</h3>
-    <p><b>血栓</b>（术后 D-二聚体升高背景）</p>
-    <ul><li>单侧小腿肿胀、疼痛、发热</li><li>突发胸痛、气促</li></ul>
-    <p><b>出血</b></p>
-    <ul><li>1 小时内浸透一片卫生巾</li><li>反复排出大血块</li><li>头晕、站起发黑、心慌</li><li>单次出血持续超过 10 天</li></ul>
-    <p><b>切口 / 腹腔</b></p>
-    <ul><li>发热、切口红肿渗液、剧烈腹痛</li></ul>
-    <p><b>呼吸</b></p>
-    <ul><li>喘息加重、夜间憋醒、吸入剂用后不缓解</li><li>咯血</li></ul>
-    <p><b>消化道</b></p>
-    <ul><li>黑便、呕血、持续上腹痛、明显消瘦</li></ul>
-  </div>
-  <div class="card warn">
-    <h3>任何新处方，主动说这三句</h3>
-    <ul><li>「我<b>青霉素过敏</b>」</li><li>「我 <b>QTc 偏临界，450 毫秒</b>」</li><li>「我有<b>哮喘</b>，在用吸入激素」</li></ul>
-  </div>
-  <div class="card">
-    <h3>不必恐慌的</h3>
-    <ul><li>术后 2–3 个月的一波掉发——应激性休止期脱发，会恢复</li><li>皮肤干燥——与缺铁及术后蛋白需求上升相关，随铁回升改善</li></ul>
+    <h3>需要就医的信号</h3>
+    <ul>
+      <li><b>呼吸</b>：喘息加重、夜间憋醒、吸入剂用后不缓解、咯血</li>
+      <li><b>消化道</b>：黑便、呕血、持续上腹痛、明显消瘦</li>
+      <li><b>出血</b>：单次月经超过 10 天、头晕站起发黑</li>
+    </ul>
+    <small><b>任何新处方主动说两句：</b>「我青霉素过敏」「我 QTc 偏临界，450 毫秒」</small>
   </div>
 </section>
 
-<div class="foot">本页为个人执行参考，不构成医疗建议。<br>所有时间点与用药以各科医嘱为准。</div>
+<div class="foot">个人执行参考，不构成医疗建议<br>时间点与用药以各科医嘱为准</div>
 </main>
 
 <script>
@@ -412,31 +334,29 @@ const S={
 };
 
 document.getElementById('dn').textContent=dayN;
-document.getElementById('td').textContent=iso(today)+' · 术后第 '+dayN+' 天'+(dayN<61?'（未满 2 个月，运动受限）':'');
+document.getElementById('td').textContent=iso(today)+' · 术后第 '+dayN+' 天';
 document.getElementById('phase').textContent=post?'雷诺考特阶段':'信必可阶段';
 if(post) document.getElementById('switchcard').hidden=true;
 
 const EV=[
-{d:'2026-09-01',t:'术后复诊 · 瑞金 冯炜炜',s:'下午。带出血记录。问残留肌瘤、复查频率、铁剂疗程、运动恢复、疫苗、12月内镜是否无碍',k:1},
-{d:'2026-09-15',t:'乙肝疫苗第 1 针',s:'社区医院，0–1–6 三针。表面抗体阴性、无保护。先经冯医生确认可以开始'},
-{d:'2026-09-25',t:'术后 8 周关键抽血 ★',s:'血常规 + 铁四项（血清铁 / 铁蛋白 / 转铁蛋白饱和度 / 总铁结合力）。此时炎症消退，铁蛋白才可信',k:1},
-{d:'2026-09-30',t:'术后满 2 个月',s:'可开始逐步恢复运动强度，具体上限按冯医生 9/1 的交代'},
-{d:'2026-10-05',t:'信必可用完 → 启用雷诺考特 ★',s:'停信必可，改布地奈德鼻喷雾剂 每侧1喷 每日2次。同期约仁济西院过敏科',k:1},
-{d:'2026-10-08',t:'仁济西院过敏科复诊 + 复查肺功能 ★',s:'普通门诊即可。带 CAP 报告（28项全阴、总IgE 119↑）。核心问题：总IgE高而特异性IgE全阴怎么解释、脱敏能否排除。做肺功能前务必让技师填入当天血红蛋白值',k:1},
-{d:'2026-10-15',t:'流感疫苗 + 乙肝第 2 针',s:'哮喘患者是流感疫苗优先人群，10–11 月为最佳窗口。两针可不同部位同时接种'},
-{d:'2026-10-19',t:'华山东院耳鼻喉复查',s:'雷诺考特用药两周复查（孙庭钰医嘱）。同时把电子鼻咽镜检查安排掉'},
-{d:'2026-10-22',t:'华山东院 铁剂随访',s:'铁剂疗程结束后随访。带 9/25 的铁四项结果。问：铁蛋白回到什么水平可停药'},
-{d:'2026-11-02',t:'术后 3 个月妇科 B 超 · 瑞金',s:'首次复发监测，重点看残留小肌瘤有无变化'},
-{d:'2026-11-16',t:'★ 提前预约两项年底检查',s:'① 华山东院 无痛胃肠镜（圣诞假期）② 仁济东院 胸部 CT（肺结节年度随访）。同时整理历年 CT 结节径线成对比表',k:1},
-{d:'2026-12-16',t:'如仍在服铁剂 → 停药',s:'胃肠镜前 7 天。铁会在肠黏膜形成黑色附着物影响观察。若 10 月已停则无需处理'},
-{d:'2026-12-20',t:'开始少渣饮食',s:'停带籽水果、粗粮、坚果、绿叶菜'},
-{d:'2026-12-22',t:'流质 + 肠道准备',s:'排便至清水样为合格。备好次日携带的喷鼻/吸入药'},
-{d:'2026-12-23',t:'无痛胃肠镜 · 华山东院 ★',s:'空腹｜必须有人陪同｜主动申报青霉素过敏 + 哮喘 + QTc 450ms｜主动要求加做幽门螺杆菌检测｜带 7/30 传染病四项（有效期至 2027-01-30）',k:1},
-{d:'2026-12-24',t:'胸部 CT · 仁济东院 ★',s:'11 mm 肺结节年度随访。拿到报告后连同历年径线对比表一起发给赵晓菁医生',k:1},
-{d:'2026-12-30',t:'取活检病理 + 合并判读',s:'胃肠镜 + Hp 状态 + 9 月铁四项 三方合并，确定缺铁最终归因'},
-{d:'2027-03-15',t:'乙肝疫苗第 3 针',s:'完成 0–1–6，之后可复查表面抗体确认是否产生保护'},
-{d:'2027-06-30',t:'年度甲功 TSH + FT4',s:'TPOAb 升高背景下的随访项'},
-{d:'2027-08-25',t:'★ 换季前提前启用鼻喷',s:'耳鼻喉医嘱：有鼻炎史且已发展为咳嗽变异性哮喘，每年秋冬换季前提前用鼻用激素预防。同期安排流感疫苗',k:1},
+{d:'2026-09-01',t:'术后复诊 · 瑞金 冯炜炜',s:'下午。带出血记录',k:1},
+{d:'2026-09-15',t:'乙肝疫苗第 1 针',s:'社区医院，0–1–6 三针。先经冯医生确认'},
+{d:'2026-09-25',t:'术后 8 周抽血 ★',s:'华山东院方便。血常规 + 铁四项 + 25(OH)D + 血清钙',k:1},
+{d:'2026-09-30',t:'术后满 2 个月',s:'可逐步恢复运动强度'},
+{d:'2026-10-05',t:'信必可用完 → 换雷诺考特 ★',s:'每侧 1 喷，每日 2 次',k:1},
+{d:'2026-10-08',t:'仁济西院过敏科 · 挂专家门诊 ★',s:'定长期随访关系 + 复查肺功能。带证据小结 PDF。肺功能前务必录入当天血红蛋白',k:1},
+{d:'2026-10-15',t:'流感疫苗 + 乙肝第 2 针',s:'可不同部位同时接种'},
+{d:'2026-10-19',t:'仁济 耳鼻咽喉科 · 电子鼻咽镜',s:'院内转诊。无手术指征则不必定期再来'},
+{d:'2026-10-22',t:'华山东院 铁剂随访',s:'带 9/25 化验结果'},
+{d:'2026-11-02',t:'术后 3 个月妇科 B 超',s:'瑞金。看残留小肌瘤有无变化'},
+{d:'2026-11-16',t:'整理历年 CT 结节径线对比表 ★',s:'12 月 CT 前准备好，连同新片一起发赵晓菁医生',k:1},
+{d:'2026-12-20',t:'少渣饮食 → 12/22 肠道准备',s:'停带籽水果、粗粮、坚果、绿叶菜；排便至清水样为合格'},
+{d:'2026-12-23',t:'无痛胃肠镜 · 华山总院 ★',s:'空腹｜需陪同｜申报青霉素过敏 + 哮喘 + QTc｜要求加做幽门螺杆菌检测',k:1},
+{d:'2026-12-24',t:'胸部 CT · 仁济东院 ★',s:'报告连同历年径线对比表发给赵晓菁医生',k:1},
+{d:'2026-12-30',t:'取病理 + 合并判读',s:'胃肠镜 + Hp + 铁四项三方合并，确定缺铁归因'},
+{d:'2027-03-15',t:'乙肝疫苗第 3 针',s:'完成后复查表面抗体'},
+{d:'2027-06-30',t:'年度甲功 TSH + FT4',s:'TPOAb 升高的随访项'},
+{d:'2027-08-25',t:'换季前启用鼻喷 ★',s:'秋冬换季前提前预防。同期安排流感疫苗',k:1},
 ];
 
 const SPAN=150,R=document.getElementById('ruler');
@@ -447,36 +367,36 @@ EV.forEach(e=>{const p=Math.round((cmp(e.d)-SURGERY)/864e5);if(p>SPAN)return;
 h+='<div class="now" style="left:'+Math.min(100,Math.max(0,dayN/SPAN*100))+'%"></div>';
 R.innerHTML=h;
 
-const TABS=[['s-today','今日'],['s-plan','时间轴'],['s-domain','六大议题'],['s-food','忌口'],['s-visit','就诊'],['s-red','红线']];
+const TABS=[['s-today','今日'],['s-plan','时间轴'],['s-food','忌口'],['s-visit','就诊']];
 const nav=document.getElementById('nav');
 TABS.forEach(([id,n],i)=>{const b=document.createElement('button');b.textContent=n;b.setAttribute('aria-selected',i===0);
  b.onclick=()=>{TABS.forEach(([j])=>document.getElementById(j).hidden=(j!==id));
  [...nav.children].forEach(x=>x.setAttribute('aria-selected',x===b));window.scrollTo(0,0)};nav.appendChild(b)});
 
 const DAILY=post?[
- ['m1','早','雷诺考特鼻喷','每侧 1 喷｜喷嘴略朝外侧，避开鼻中隔'],
- ['m2','早餐后30分','中药汤剂','补血补气方，饭后 30 分钟'],
- ['m3','早','防晒 UVMune 400','出门与否都涂'],
- ['m4','午间','琥珀酸亚铁缓释片','整片吞服勿嚼，配维 C｜与中药间隔 ≥2 小时'],
+ ['m1','早','雷诺考特鼻喷','每侧 1 喷，喷嘴略朝外侧'],
+ ['m2','早','中药汤剂','早餐后 30 分钟'],
+ ['m3','午','琥珀酸亚铁','整片吞服，配维 C'],
+ ['m4','晚','中药汤剂','晚餐后 30 分钟'],
  ['m5','晚','雷诺考特鼻喷','每侧 1 喷'],
- ['m6','晚餐后30分','中药汤剂','饭后 30 分钟'],
+ ['m6','睡前','钙胶囊 + 维 D3','与午间铁剂错开，勿挪到白天'],
 ]:[
- ['m1','早','信必可都保','1 吸｜用后立即漱口吐掉，不可省略'],
- ['m2','早餐后30分','中药汤剂','补血补气方，饭后 30 分钟'],
- ['m3','早','防晒 UVMune 400','出门与否都涂'],
- ['m4','午间','琥珀酸亚铁缓释片','整片吞服勿嚼，配维 C｜与中药间隔 ≥2 小时'],
- ['m5','晚餐后30分','中药汤剂','饭后 30 分钟'],
- ['m6','晚','信必可都保','1 吸｜用后立即漱口吐掉'],
+ ['m1','早','信必可都保','1 吸，用后立即漱口吐掉'],
+ ['m2','早','中药汤剂','早餐后 30 分钟'],
+ ['m3','午','琥珀酸亚铁','整片吞服，配维 C'],
+ ['m4','晚','中药汤剂','晚餐后 30 分钟'],
+ ['m5','晚','信必可都保','1 吸，漱口吐掉'],
+ ['m6','睡前','钙胶囊 + 维 D3','与午间铁剂错开，勿挪到白天'],
 ];
 const BASE=[
- ['b1','蛋白质吃够','红肉 / 鸡蛋 / 动物血 / 猪肝（每周 1–2 次）'],
+ ['b1','蛋白质吃够','红肉 / 鸡蛋 / 动物血 / 猪肝'],
  ['b2','饭时不喝浓茶咖啡','抑制铁吸收'],
- ['b3','不空腹','胃蛋白酶原偏低'],
- ['b4',dayN<61?'不提重物、不剧烈运动':'运动强度循序渐进',dayN<61?'术后满 2 个月（9/30）前保持':'从快走开始，避免高腹压动作'],
- ['b5','不熬夜、控制情绪','中医与西医在这一点上是一致的'],
+ ['b3','不熬夜、不劳累','固定入睡时间比睡够时长更重要'],
 ];
+if(dayN<61) BASE.push(['b4','不提重物、不剧烈运动','术后满 2 个月（9/30）前保持']);
+
 const BLEED=['出血 无','点滴','少量','中等','量大'];
-const key='hm2:'+iso(today);
+const key='hm3:'+iso(today);
 let st={c:{},b:'',n:''};
 function render(){
  document.getElementById('daily').innerHTML=DAILY.map(([id,t,a,b])=>
@@ -497,67 +417,18 @@ function drawEv(){
   const dt=cmp(e.d),diff=Math.round((dt-today)/864e5);
   const cls=diff<0?'past':(diff<=10?'soon':''),txt=diff<0?'已过':(diff===0?'今天':(diff>60?Math.round(diff/30)+' 个月':diff+' 天'));
   return '<div class="ev'+(ck[i]?' on':'')+'" data-i="'+i+'"><div class="d mono"><b>'+e.d.slice(5).replace('-','/')+'</b><span>'+e.d.slice(0,4)+'</span></div><div class="txt"><b>'+e.t+'<span class="cd '+cls+'">'+txt+'</span></b><span>'+e.s+'</span></div></div>'}).join('');
- document.querySelectorAll('.ev').forEach(el=>el.onclick=()=>{ck[el.dataset.i]=!ck[el.dataset.i];S.set('hm2:ck',ck);drawEv()});
+ document.querySelectorAll('.ev').forEach(el=>el.onclick=()=>{ck[el.dataset.i]=!ck[el.dataset.i];S.set('hm3:ck',ck);drawEv()});
 }
 
-const DOM=[
- ['肺结节 11 mm','年度胸部 CT 随访 · 仁济东院 → 报告发赵晓菁医生。下次 2026 年 12 月。<b>关键动作：把历年 CT 的结节径线整理成对比表</b>——随访看的是变化，不是绝对值。'],
- ['鼻炎 → 咳嗽变异性哮喘','<b>2023 与 2026 两次过敏原检测全阴 → 非过敏原驱动（把握度：很高）。2023 年 5 月已确诊 CVA，病程三年。</b>脱敏与生物制剂均不适用，吸入 + 鼻用激素是仅有的工具。信必可用至 10 月初 → 切换雷诺考特 → 仁济西院过敏科复诊 + 复查肺功能。每年秋冬换季前提前启用鼻喷预防。7/30 基线：MEF25 63.5%、RV 136%、RV%TLC 130.4%（小气道气体陷闭）。'],
- ['子宫肌瘤术后 · 残留小肌瘤','7/31 手术，病理良性，体内仍有小肌瘤 → 长期忌口 + 作息 + 情绪 + 避免劳累。9/1 复诊，11 月初术后 3 个月 B 超。目标：绝经前不再开第二次刀。'],
- ['缺铁性贫血','2023-05 Hb 131 正常 → 2026-07 术后 98，<b>缺铁发生在近三年内</b>，与肌瘤致月经量增多时间线吻合。9/25 满 8 周查铁四项，10 月下旬华山东院随访决定停药时机。<b>还会影响肺弥散测值——复查肺功能务必做 Hb 校正。</b>'],
- ['胃蛋白酶原偏低','12 月无痛胃肠镜（华山东院），主动要求加做幽门螺杆菌检测。传染病四项 7/30 出具，有效期至 2027-01-30，可复用。'],
- ['其他随访项','甲功 TSH+FT4 年度（TPOAb 升高）｜QTc 450 ms 临界（长期告知项）｜青霉素过敏（长期告知项）｜乙肝疫苗补种｜流感疫苗｜皮肤科择期'],
-];
-document.getElementById('domains').innerHTML=DOM.map((d,i)=>
- '<div class="dom"><div class="n mono">'+(i+1)+'</div><div class="txt"><b>'+d[0]+'</b><span>'+d[1]+'</span></div></div>').join('');
-
 document.getElementById('copy').onclick=async()=>{
- const out=['症状记录（术后）'];
- for(let i=13;i>=0;i--){const d=new Date(today-i*864e5),r=await S.get('hm2:'+iso(d));
+ const out=['症状记录'];
+ for(let i=13;i>=0;i--){const d=new Date(today-i*864e5),r=await S.get('hm3:'+iso(d));
   if(r&&(r.b||r.n))out.push(iso(d)+'  '+(r.b||'—')+(r.n?'  '+r.n:''))}
  const t=out.length>1?out.join('\n'):'暂无记录';
  try{await navigator.clipboard.writeText(t);alert('已复制\n\n'+t)}catch(e){alert(t)}
 };
 
-function fold(s){const o=[];let c='';for(const ch of s){if(new Blob([c+ch]).size>72){o.push(c);c=' '}c+=ch}o.push(c);return o.join('\r\n')}
-const esc=t=>t.replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/\n/g,'\\n');
-const nx=d=>{const t=cmp(d);t.setDate(t.getDate()+1);return iso(t).replace(/-/g,'')};
-let U=0;
-function vevent(o){
- U++;const L=['BEGIN:VEVENT','UID:hma-'+U+'@health.local','DTSTAMP:20260827T000000Z'];
- if(o.allday){L.push('DTSTART;VALUE=DATE:'+o.start,'DTEND;VALUE=DATE:'+o.end)}
- else{L.push('DTSTART:'+o.start,'DTEND:'+o.end)}
- if(o.rrule)L.push('RRULE:'+o.rrule);
- L.push(fold('SUMMARY:'+esc(o.sum)),fold('DESCRIPTION:'+esc(o.desc||'')));
- (o.alarms||[]).forEach(a=>L.push('BEGIN:VALARM','ACTION:DISPLAY',fold('DESCRIPTION:'+esc(o.sum)),'TRIGGER:'+a,'END:VALARM'));
- L.push('END:VEVENT');return L;
-}
-document.getElementById('ics').onclick=()=>{
- let L=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//HealthAssistant//CN//ZH','CALSCALE:GREGORIAN','METHOD:PUBLISH',
-  'X-WR-CALNAME:健康管理','X-WR-TIMEZONE:Asia/Shanghai'];
- const UT='FREQ=DAILY;UNTIL=20270930T235959';
- L=L.concat(vevent({start:'20260828T080000',end:'20260828T081500',rrule:'FREQ=DAILY;UNTIL=20261005T235959',
-  sum:'\u2600\ufe0f 早：信必可 + 中药 + 防晒',desc:'信必可 1 吸，用后立即漱口吐掉；早餐后30分钟服中药；UVMune 400 防晒。',alarms:['-PT0M']}));
- L=L.concat(vevent({start:'20260828T200000',end:'20260828T201500',rrule:'FREQ=DAILY;UNTIL=20261005T235959',
-  sum:'\ud83c\udf19 晚：信必可 + 中药',desc:'信必可 1 吸，用后立即漱口吐掉；晚餐后30分钟服中药。',alarms:['-PT0M']}));
- L=L.concat(vevent({start:'20261006T080000',end:'20261006T081500',rrule:UT,
-  sum:'\u2600\ufe0f 早：雷诺考特 + 中药 + 防晒',desc:'雷诺考特每侧1喷，喷嘴略朝外侧避开鼻中隔；早餐后30分钟服中药；防晒。',alarms:['-PT0M']}));
- L=L.concat(vevent({start:'20261006T200000',end:'20261006T201500',rrule:UT,
-  sum:'\ud83c\udf19 晚：雷诺考特 + 中药',desc:'雷诺考特每侧1喷；晚餐后30分钟服中药。',alarms:['-PT0M']}));
- L=L.concat(vevent({start:'20260828T123000',end:'20260828T124500',rrule:'FREQ=DAILY;UNTIL=20261031T235959',
-  sum:'\ud83d\udc8a 午：琥珀酸亚铁',desc:'整片吞服勿嚼，配维C。与中药汤剂间隔≥2小时。疗程结束时间以医生为准，届时去华山东院随访。',alarms:['-PT0M']}));
- L=L.concat(vevent({start:'20260830T093000',end:'20260830T110000',rrule:'FREQ=WEEKLY;INTERVAL=2;UNTIL=20270630T235959',
-  sum:'\ud83c\udf3f 中医复诊 · 岳阳医院 赵莉',desc:'每两周日上午。带上症状记录。要问：忌口造成的蛋白铁缺口怎么补、经期是否停药、忌口执行多久。',alarms:['-P1DT10H','-PT12H']}));
- EV.forEach(e=>{const s=e.d.replace(/-/g,'');
-  L=L.concat(vevent({allday:1,start:s,end:nx(e.d),sum:(e.k?'\u2605 ':'')+e.t,desc:e.s,
-   alarms:e.k?['-P2DT15H','-PT15H','PT9H']:['-PT15H','PT9H']}))});
- L.push('END:VCALENDAR');
- const blob=new Blob([L.join('\r\n')+'\r\n'],{type:'text/calendar;charset=utf-8'});
- const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='健康管理日历.ics';
- document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),3000);
-};
-
-(async()=>{const r=await S.get(key);if(r)st=r;const c=await S.get('hm2:ck');if(c)ck=c;
+(async()=>{const r=await S.get(key);if(r)st=r;const c=await S.get('hm3:ck');if(c)ck=c;
  note.value=st.n||'';render();drawEv()})();
 
 if('serviceWorker' in navigator && location.protocol==='https:'){

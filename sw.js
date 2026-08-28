@@ -1,6 +1,6 @@
 /* 健康管理小助手 · 离线缓存
    改版后请把下面的版本号 +1，手机上重新打开即会更新 */
-const VERSION = 'hm-v2';
+const VERSION = 'hm-v4';
 const FILES = ['./', './index.html', './manifest.json',
                './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 
